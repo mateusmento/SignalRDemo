@@ -8,8 +8,8 @@ namespace SignalRDemo
 	{
 		public void Execute(string[] files)
 		{
-			int duration = 5;
-			Thread.Sleep(duration * 1000);
+			int durationInSeconds = 5;
+			Thread.Sleep(durationInSeconds * 1000);
 			Console.WriteLine("File Import Completed");
 		}
 

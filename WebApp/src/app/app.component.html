@@ -1,5 +1,31 @@
-<button (click)="importFile()">Import File</button>
-<p>{{values}}</p>
-<p>{{msg}}</p>
+<main>
 
-<router-outlet></router-outlet>
+	<h1 id="title">File Import</h1>
+
+	<div class="form-group">
+		<label>Date</label>
+		<input type="datetime" class="form-control" [(ngModel)]="date">
+	</div>
+
+	<div class="form-group">
+		<label>Import Type</label>
+		<select class="form-control" [(ngModel)]="importType">
+			<option [value]="ImportType.CUSTOMERS">Customers</option>
+			<option [value]="ImportType.PRODUCTS">Products</option>
+			<option [value]="ImportType.PRODUCT_SALES">Products Sales</option>
+			<option [value]="ImportType.CUSTOMER_PRODUCT_RECOMMENDATIONS">Customer Product Recommendation</option>
+		</select>
+	</div>
+
+	<div class="form-group">
+		<label>Filename</label>
+		<input type="text" class="form-control" [(ngModel)]="filename">
+	</div>
+	
+	<div id="import-btn" class="form-group">
+		<button id="import-btn" class="btn btn-primary" (click)="importFile()">Import File</button>
+	</div>
+
+	<p>{{msg}}</p>
+	
+</main>
